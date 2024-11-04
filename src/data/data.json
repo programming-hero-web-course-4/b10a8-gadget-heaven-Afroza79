@@ -1,0 +1,150 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "Wireless Earbuds",
+    "product_image": "https://example.com/images/earbuds.jpg",
+    "category": "Electronics",
+    "price": 75,
+    "description": "High-quality wireless earbuds with noise-cancellation and long battery life.",
+    "Specification": [
+      "Bluetooth 5.0",
+      "8-hour battery life",
+      "Noise cancellation"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "brand": "SoundWave"
+  },
+  {
+    "product_id": 2,
+    "product_title": "Smart Watch",
+    "product_image": "https://example.com/images/smartwatch.jpg",
+    "category": "Electronics",
+    "price": 150,
+    "description": "A feature-packed smartwatch with heart rate monitoring and GPS.",
+    "Specification": ["Heart Rate Monitor", "GPS", "Water Resistant"],
+    "availability": true,
+    "rating": 4.2,
+    "brand": "TechTime"
+  },
+  {
+    "product_id": 3,
+    "product_title": "Laptop Stand",
+    "product_image": "https://example.com/images/laptop-stand.jpg",
+    "category": "Electronics",
+    "price": 60,
+    "description": "Adjustable and ergonomic laptop stand suitable for all laptop sizes.",
+    "Specification": ["Aluminum Build", "Height Adjustable", "Portable"],
+    "availability": true,
+    "rating": 4.0,
+    "brand": "WorkEase"
+  },
+  {
+    "product_id": 4,
+    "product_title": "4K Ultra HD Monitor",
+    "product_image": "https://example.com/images/4k-monitor.jpg",
+    "category": "Electronics",
+    "price": 250,
+    "description": "Stunning 4K resolution monitor for enhanced clarity and immersive experience.",
+    "Specification": [
+      "4K Resolution",
+      "60Hz Refresh Rate",
+      "HDMI & DisplayPort"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "brand": "ViewPerfect"
+  },
+  {
+    "product_id": 5,
+    "product_title": "Gaming Keyboard",
+    "product_image": "https://example.com/images/gaming-keyboard.jpg",
+    "category": "Electronics",
+    "price": 90,
+    "description": "Mechanical gaming keyboard with RGB lighting and programmable keys.",
+    "Specification": ["Mechanical Switches", "RGB Lighting", "Anti-Ghosting"],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "GamePro"
+  },
+  {
+    "product_id": 6,
+    "product_title": "Portable Charger",
+    "product_image": "https://example.com/images/portable-charger.jpg",
+    "category": "Electronics",
+    "price": 55,
+    "description": "Compact and high-capacity power bank for on-the-go charging.",
+    "Specification": ["10000mAh", "USB-C & USB-A", "Fast Charging"],
+    "availability": true,
+    "rating": 4.3,
+    "brand": "ChargeMax"
+  },
+  {
+    "product_id": 7,
+    "product_title": "Organic Cotton T-Shirt",
+    "product_image": "https://example.com/images/tshirt.jpg",
+    "category": "Clothing",
+    "price": 50,
+    "description": "Soft and breathable t-shirt made from 100% organic cotton.",
+    "Specification": [
+      "100% Organic Cotton",
+      "Machine Washable",
+      "Eco-Friendly"
+    ],
+    "availability": true,
+    "rating": 4.1,
+    "brand": "GreenWear"
+  },
+  {
+    "product_id": 8,
+    "product_title": "Denim Jeans",
+    "product_image": "https://example.com/images/jeans.jpg",
+    "category": "Clothing",
+    "price": 80,
+    "description": "Comfortable and durable denim jeans with a modern fit.",
+    "Specification": ["98% Cotton", "Machine Washable", "Stretch Fit"],
+    "availability": false,
+    "rating": 4.4,
+    "brand": "UrbanStyle"
+  },
+  {
+    "product_id": 9,
+    "product_title": "Dell XPS 13",
+    "product_image": "https://example.com/images/dell_xps_13.jpg",
+    "category": "Laptop",
+    "price": 999.99,
+    "description": "A high-performance laptop with a sleek design.",
+    "Specification": ["Intel i7", "16GB RAM", "512GB SSD", "13.3-inch display"],
+    "availability": true,
+    "rating": 4.8,
+    "brand": "BrewBuddy"
+  },
+  {
+    "product_id": 10,
+    "product_title": "Apple MacBook Pro",
+    "product_image": "https://example.com/images/macbook_pro.jpg",
+    "category": "Laptop",
+    "price": 1299.99,
+    "description": "Powerful laptop designed for professionals.",
+    "Specification": [
+      "Apple M1",
+      "16GB RAM",
+      "1TB SSD",
+      "13-inch Retina display"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "brand": "HydroLife"
+  },
+  {
+    "product_id": 11,
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://example.com/images/thinkpad_x1_carbon.jpg",
+    "category": "Laptop",
+    "price": 1399.99,
+    "description": "A business laptop with exceptional durability.",
+    "Specification": ["Intel i7", "16GB RAM", "1TB SSD", "14-inch display"],
+    "availability": true,
+    "rating": 4.6
+  }
+]

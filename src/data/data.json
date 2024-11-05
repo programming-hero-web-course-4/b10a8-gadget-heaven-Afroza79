@@ -81,34 +81,54 @@
   },
   {
     "product_id": 7,
-    "product_title": "Organic Cotton T-Shirt",
-    "product_image": "https://example.com/images/tshirt.jpg",
-    "category": "Clothing",
-    "price": 50,
-    "description": "Soft and breathable t-shirt made from 100% organic cotton.",
-    "Specification": [
-      "100% Organic Cotton",
-      "Machine Washable",
-      "Eco-Friendly"
-    ],
+    "product_title": "iPhone 13",
+    "product_image": "https://example.com/images/iphone_13.jpg",
+    "category": "Phones",
+    "price": 799,
+    "description": "Latest Apple smartphone with A15 chip and 5G support.",
+    "Specification": ["128GB Storage", "12MP Dual Camera", "5G Enabled"],
     "availability": true,
-    "rating": 4.1,
-    "brand": "GreenWear"
+    "rating": 4.8,
+    "brand": "Apple"
   },
   {
     "product_id": 8,
-    "product_title": "Denim Jeans",
-    "product_image": "https://example.com/images/jeans.jpg",
-    "category": "Clothing",
-    "price": 80,
-    "description": "Comfortable and durable denim jeans with a modern fit.",
-    "Specification": ["98% Cotton", "Machine Washable", "Stretch Fit"],
-    "availability": false,
-    "rating": 4.4,
-    "brand": "UrbanStyle"
+    "product_title": "Samsung Galaxy S21",
+    "product_image": "https://example.com/images/galaxy_s21.jpg",
+    "category": "Phones",
+    "price": 749,
+    "description": "Premium smartphone with a stunning display and triple camera.",
+    "Specification": ["128GB Storage", "108MP Triple Camera", "5G Enabled"],
+    "availability": true,
+    "rating": 4.7,
+    "brand": "Samsung"
   },
   {
     "product_id": 9,
+    "product_title": "Apple Watch Series 7",
+    "product_image": "https://example.com/images/apple_watch_series_7.jpg",
+    "category": "Smart Watches",
+    "price": 399,
+    "description": "The most advanced Apple Watch with new features and larger display.",
+    "Specification": ["ECG App", "Fitness Tracker", "Water Resistant"],
+    "availability": true,
+    "rating": 4.9,
+    "brand": "Apple"
+  },
+  {
+    "product_id": 10,
+    "product_title": "Samsung Galaxy Watch 4",
+    "product_image": "https://example.com/images/galaxy_watch_4.jpg",
+    "category": "Smart Watches",
+    "price": 249,
+    "description": "Stylish smartwatch with health tracking features and great battery life.",
+    "Specification": ["Body Composition", "Sleep Tracking", "Wear OS"],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "Samsung"
+  },
+  {
+    "product_id": 11,
     "product_title": "Dell XPS 13",
     "product_image": "https://example.com/images/dell_xps_13.jpg",
     "category": "Laptop",
@@ -120,7 +140,7 @@
     "brand": "BrewBuddy"
   },
   {
-    "product_id": 10,
+    "product_id": 12,
     "product_title": "Apple MacBook Pro",
     "product_image": "https://example.com/images/macbook_pro.jpg",
     "category": "Laptop",
@@ -137,7 +157,7 @@
     "brand": "HydroLife"
   },
   {
-    "product_id": 11,
+    "product_id": 13,
     "product_title": "Lenovo ThinkPad X1 Carbon",
     "product_image": "https://example.com/images/thinkpad_x1_carbon.jpg",
     "category": "Laptop",

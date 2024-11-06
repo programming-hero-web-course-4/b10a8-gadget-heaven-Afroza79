@@ -1,8 +1,26 @@
-# React + Vite
+# Gadget Heaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for buy the gadget and your desire product can add to the wishlist. you can also see the every product deatils and ratings.
 
-Currently, two official plugins are available:
+## Features
+- Dynamic Product Display
+- Add to Cart Functionality
+- Wishlist Feature
+- Product Rating System
+- Product Availability Indicator
+- Responsive Layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React Toastify for notifications
+- Tailwind CSS for styling
+- JavaScript (ES6)
+- React Router Dom
+- UseState
+- UseEffect
+- UseLocation
+
+## Requirement Document Link
+- https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
+
+## Live Link
+- https://gadget01heaven.netlify.app/

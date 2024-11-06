@@ -19,12 +19,12 @@ const WishList = ({ wishlist, onAddToCart, setWishlist }) => {
           {wishlist.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-4 flex justify-between rounded-xl items-center mb-4"
+              className="bg-white p-4 xl:flex lg:flex md:flex justify-between rounded-xl items-center mb-4"
             >
-              <div className="flex gap-6">
+              <div className="xl:flex lg:flex md:flex gap-6">
                 <div>
                   <img
-                    className="w-28 h-24 bg-gray-500 rounded-xl"
+                    className="w-full xl:w-28 lg:w-28 md:w-28 h-40 xl:h-24 lg:h-24 md:h-24 rounded-xl"
                     src={item.product_image}
                     alt={item.product_title}
                   />
@@ -47,7 +47,7 @@ const WishList = ({ wishlist, onAddToCart, setWishlist }) => {
               </div>
               <FontAwesomeIcon
                 icon={faCircleXmark}
-                className="text-red-400 text-2xl cursor-pointer"
+                className="text-red-400 text-2xl cursor-pointer mt-4 xl:mt-0 lg:mt-0 md:mt-0"
                 onClick={() => handleRemoveItem(index)}
               />
             </div>

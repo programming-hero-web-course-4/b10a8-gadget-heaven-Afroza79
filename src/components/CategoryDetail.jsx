@@ -13,11 +13,11 @@ const CategoryDetail = ({ categoryName }) => {
     return (
         <div>
            
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-[950px]'>
+            <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4 w-[313px] mx-auto xl:w-[950px] lg:w-[650px] md:w-[370px]'>
                 {filteredData.length > 0 ? (
                     filteredData.map((product) => (
                         <div key={product.product_id} className='rounded-lg p-4 bg-white'>
-                            <img src={product.product_image} alt={product.product_title} className='w-full h-48 object-cover rounded-lg bg-gray-400' />
+                            <img src={product.product_image} alt={product.product_title} className='w-full h-48 object-cover rounded-lg' />
                             <h3 className='text-lg mb-2 font-semibold mt-2'>{product.product_title}</h3>
                             <p className='text-gray-600 mb-4'>${product.price}</p>
                             <Link to={`/product/${product.product_id}`} state={{ product }}>

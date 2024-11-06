@@ -8,19 +8,23 @@ import BannerImagePart from "./BannerImagePart";
 import ProductViewDetails from "./ProductViewDetails";
 import Dashboard from "./Dashboard";
 import WishList from "./WishList";
+import { toast } from "react-toastify";
 
-const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
+const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist, setActiveComponent,activeComponent,cartCount }) => {
   const location = useLocation();
   const isProductViewDetails = location.pathname.startsWith("/product/");
   const isDashboardViewDetails = location.pathname.startsWith("/dashboard");
-  const [activeComponent, setActiveComponent] = useState("dashboard"); // Default to 'dashboard'
-  const [cartCount, setCartCount] = useState(cartItems.length);
+  const isStatisticsViewDetails = location.pathname.startsWith("/statistics");
+  const isAboutUsViewDetails = location.pathname.startsWith("/about-us");
+  // const [activeComponent, setActiveComponent] = useState("dashboard"); 
+  // const [cartCount, setCartCount] = useState(cartItems.length);
   const [cart, setCart] = useState(cartItems);
 
-  const handleAddToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
-    setCartCount((prevCount) => prevCount + 1); // Increment the cart count
-  };
+  // const handleAddToCart = (item) => {
+  //   setCart((prevCart) => [...prevCart, item]);
+  //   setCartCount((prevCount) => prevCount + 1); // Increment the cart count
+  //   toast.success(`Product has been added to the cart!`);
+  // };
 
   const handleWishlistClick = () => {
     setActiveComponent("wishlist"); // Set active component to Wishlist
@@ -30,33 +34,30 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
     setActiveComponent("dashboard"); // Set active component to Dashboard
   };
 
-  useEffect(() => {
-    setCartCount(cartItems.length);
-    setCart(cartItems);
-  }, [cartItems]);
+  // useEffect(() => {
+  //   setCartCount(cartItems.length);
+  //   setCart(cartItems);
+  // }, [cartItems]);
 
   return (
     <>
       <header
-        className={`${
-          isProductViewDetails || isDashboardViewDetails
-            ? "px-0 xl:px-0 lg:px-0 md:px-0 pt-0"
-            : "px-2 xl:px-20 lg:px-20 md:px-8 pt-4"
-        }`}
+        className={`${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+          ? "px-0 xl:px-0 lg:px-0 md:px-0 pt-0"
+          : "px-2 xl:px-20 lg:px-20 md:px-8 pt-4"
+          }`}
       >
         <div
-          className={`${
-            isProductViewDetails || isDashboardViewDetails
-              ? ""
-              : "p-1 border-l-2 border-r-2 rounded-xl border-gray-300"
-          }`}
+          className={`${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+            ? ""
+            : "p-1 border-l-2 border-r-2 rounded-xl border-gray-300"
+            }`}
         >
           <div
-            className={`rounded-xl  ${
-              isProductViewDetails || isDashboardViewDetails
-                ? " pb-0 xl:pb-0 lg:pb-0 md:pb-0 "
-                : "bg-purple pb-28 xl:pb-60 lg:pb-60 md:pb-60"
-            }`}
+            className={`rounded-xl  ${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+              ? " pb-0 xl:pb-0 lg:pb-0 md:pb-0 "
+              : "bg-purple pb-28 xl:pb-60 lg:pb-60 md:pb-60"
+              }`}
           >
             <div className="navbar px-2 xl:px-36 lg:px-10 md:px-10 pt-6">
               <div className="navbar-start">
@@ -121,14 +122,25 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                         Dashboard
                       </NavLink>
                     </li>
+                    <li>
+                      <NavLink
+                        to="/about-us"
+                        className={({ isActive }) =>
+                          isActive
+                            ? " bg-gray-500 focus:bg-transparent"
+                            : "focus:bg-transparent"
+                        }
+                      >
+                        About Us
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
                 <a
-                  className={`btn btn-ghost text-md xl:text-xl lg:text-xl md:text-xl ${
-                    isProductViewDetails || isDashboardViewDetails
-                      ? "text-black"
-                      : "text-white"
-                  }`}
+                  className={`btn btn-ghost text-md xl:text-xl lg:text-xl md:text-xl ${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                    ? "text-black"
+                    : "text-white"
+                    }`}
                 >
                   Gadget Heaven
                 </a>
@@ -139,14 +151,12 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                     <NavLink
                       to="/"
                       className={({ isActive }) =>
-                        `${
-                          isProductViewDetails || isDashboardViewDetails
-                            ? "text-black"
-                            : "text-white"
-                        } ${
-                          isActive
-                            ? "bg-gray-500 focus:bg-transparent"
-                            : "focus:bg-transparent"
+                        `${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                          ? "text-black"
+                          : "text-white"
+                        } ${isActive
+                          ? "bg-gray-500 focus:bg-transparent"
+                          : "focus:bg-transparent"
                         }`
                       }
                     >
@@ -157,14 +167,12 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                     <NavLink
                       to="/statistics"
                       className={({ isActive }) =>
-                        `${
-                          isProductViewDetails || isDashboardViewDetails
-                            ? "text-black"
-                            : "text-white"
-                        } ${
-                          isActive
-                            ? "bg-gray-500 focus:bg-transparent"
-                            : "focus:bg-transparent"
+                        `${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                          ? "text-black"
+                          : "text-white"
+                        } ${isActive
+                          ? "bg-gray-500 focus:bg-transparent"
+                          : "focus:bg-transparent"
                         }`
                       }
                     >
@@ -175,18 +183,32 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                     <NavLink
                       to="/dashboard"
                       className={({ isActive }) =>
-                        `${
-                          isProductViewDetails || isDashboardViewDetails
-                            ? "text-black"
-                            : "text-white"
-                        } ${
-                          isActive
-                            ? "bg-gray-500 focus:bg-transparent"
-                            : "focus:bg-transparent"
+                        `${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                          ? "text-black"
+                          : "text-white"
+                        } ${isActive
+                          ? "bg-gray-500 focus:bg-transparent"
+                          : "focus:bg-transparent"
                         }`
                       }
                     >
                       Dashboard
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/about-us"
+                      className={({ isActive }) =>
+                        `${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                          ? "text-black"
+                          : "text-white"
+                        } ${isActive
+                          ? "bg-gray-500 focus:bg-transparent"
+                          : "focus:bg-transparent"
+                        }`
+                      }
+                    >
+                      About Us
                     </NavLink>
                   </li>
                 </ul>
@@ -220,16 +242,16 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
 
             {/* Banner */}
             <div
-              className={`${
-                isProductViewDetails || isDashboardViewDetails
-                  ? "pb-60 bg-purple"
+              className={`${isProductViewDetails
+                ? "pb-60 bg-purple"
+                : (isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails)
+                  ? "pb-20 bg-purple"
                   : ""
-              }`}
+                }`}
             >
               <div
-                className={`w-full xl:w-2/5 lg:w-4/5 md:w-full px-3 xl:px-0 lg:px-6 md:px-6 mx-auto text-center ${
-                  isProductViewDetails ? "" : "mt-12"
-                }`}
+                className={`w-full xl:w-2/5 lg:w-4/5 md:w-full px-3 xl:px-0 lg:px-6 md:px-6 mx-auto text-center ${isProductViewDetails ? "" : "mt-12"
+                  }`}
               >
                 {isProductViewDetails ? (
                   <>
@@ -243,6 +265,18 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                       Dashboard
                     </h1>
                   </>
+                ) : isStatisticsViewDetails ? (
+                  <>
+                    <h1 className="text-2xl xl:text-3xl lg:text-3xl md:text-3xl text-white font-bold mb-4 pt-8">
+                      Statistics
+                    </h1>
+                  </>
+                ) : isAboutUsViewDetails ? (
+                  <>
+                    <h1 className="text-2xl xl:text-3xl lg:text-3xl md:text-3xl text-white font-bold mb-4 pt-8">
+                      About Us
+                    </h1>
+                  </>
                 ) : (
                   <>
                     <h1 className="text-2xl xl:text-4xl lg:text-4xl md:text-4xl text-white font-bold mb-8">
@@ -252,17 +286,16 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                   </>
                 )}
                 <p
-                  className={`${
-                    isProductViewDetails || isDashboardViewDetails
-                      ? "text-sm text-white pb-8"
-                      : "text-sm text-white mb-8"
-                  }`}
+                  className={`${isProductViewDetails || isDashboardViewDetails || isStatisticsViewDetails || isAboutUsViewDetails
+                    ? "text-sm text-white pb-8"
+                    : "text-sm text-white mb-8"
+                    }`}
                 >
                   Explore the latest gadgets that will take your experience to
                   the next level. From smart devices to the coolest accessories,
                   we have it all!
                 </p>
-                {!isProductViewDetails && !isDashboardViewDetails && (
+                {!isProductViewDetails && !isDashboardViewDetails && !isStatisticsViewDetails && !isAboutUsViewDetails && (
                   <button className="bg-white text-purple text-sm font-medium px-5 py-2 rounded-full">
                     Shop Now
                   </button>
@@ -270,21 +303,19 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
                 {isDashboardViewDetails && (
                   <div className="flex items-center gap-2 justify-center">
                     <button
-                      className={`p-2 text-sm font-medium px-5 py-2 rounded-full ${
-                        activeComponent === "dashboard"
-                          ? "bg-white text-purple"
-                          : "border border-white text-white"
-                      }`}
+                      className={`p-2 text-sm font-medium px-5 py-2 rounded-full ${activeComponent === "dashboard"
+                        ? "bg-white text-purple"
+                        : "border border-white text-white"
+                        }`}
                       onClick={handleCartClick}
                     >
                       Cart
                     </button>
                     <button
-                      className={`p-2 text-sm font-medium px-5 py-2 rounded-full ${
-                        activeComponent === "wishlist"
-                          ? "bg-white text-purple"
-                          : "border border-white text-white"
-                      }`}
+                      className={`p-2 text-sm font-medium px-5 py-2 rounded-full ${activeComponent === "wishlist"
+                        ? "bg-white text-purple"
+                        : "border border-white text-white"
+                        }`}
                       onClick={handleWishlistClick}
                     >
                       Wishlist
@@ -297,22 +328,23 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist }) => {
         </div>
 
         {/* After Banner Image */}
-        {!isProductViewDetails && !isDashboardViewDetails && (
+        {!isProductViewDetails && !isDashboardViewDetails && !isStatisticsViewDetails && !isAboutUsViewDetails && (
           <BannerImagePart />
         )}
       </header>
       {/* {!isProductViewDetails && <Cards />} */}
-      {activeComponent === "wishlist"
-        ? isDashboardViewDetails && (
-            <WishList
-              wishlist={wishlist}
-              onAddToCart={handleAddToCart}
-              setWishlist={setWishlist}
-            />
-          )
+      {/* {activeComponent === "wishlist"
+        ?  (
+          <WishList
+            wishlist={wishlist}
+            onAddToCart={handleAddToCart}
+            setWishlist={setWishlist}
+          />
+        )
         : isDashboardViewDetails && (
-            <Dashboard cartItems={cart} setCartItems={setCartItems} />
-          )}
+          ""
+         
+        )} */}
     </>
   );
 };

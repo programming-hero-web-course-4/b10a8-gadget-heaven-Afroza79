@@ -2,7 +2,7 @@
   {
     "product_id": 1,
     "product_title": "Wireless Earbuds",
-    "product_image": "https://example.com/images/earbuds.jpg",
+    "product_image": "https://i.ibb.co.com/b1Df2Pd/earbuds.jpg",
     "category": "Electronics",
     "price": 75,
     "description": "High-quality wireless earbuds with noise-cancellation and long battery life.",
@@ -16,9 +16,8 @@
     "brand": "SoundWave"
   },
   {
-    "product_id": 2,
     "product_title": "Smart Watch",
-    "product_image": "https://example.com/images/smartwatch.jpg",
+    "product_image": "https://i.ibb.co.com/nswPnFP/watch.jpg",
     "category": "Electronics",
     "price": 150,
     "description": "A feature-packed smartwatch with heart rate monitoring and GPS.",
@@ -30,7 +29,7 @@
   {
     "product_id": 3,
     "product_title": "Laptop Stand",
-    "product_image": "https://example.com/images/laptop-stand.jpg",
+    "product_image": "https://i.ibb.co.com/wYG1Yg8/laptopstand.jpg" ,
     "category": "Electronics",
     "price": 60,
     "description": "Adjustable and ergonomic laptop stand suitable for all laptop sizes.",
@@ -42,7 +41,7 @@
   {
     "product_id": 4,
     "product_title": "4K Ultra HD Monitor",
-    "product_image": "https://example.com/images/4k-monitor.jpg",
+    "product_image": "https://i.ibb.co.com/2F3Jbkc/ultramonitor.jpg",
     "category": "Electronics",
     "price": 250,
     "description": "Stunning 4K resolution monitor for enhanced clarity and immersive experience.",
@@ -58,7 +57,7 @@
   {
     "product_id": 5,
     "product_title": "Gaming Keyboard",
-    "product_image": "https://example.com/images/gaming-keyboard.jpg",
+    "product_image": "https://i.ibb.co.com/LtpYFGw/gamingkey.jpg",
     "category": "Electronics",
     "price": 90,
     "description": "Mechanical gaming keyboard with RGB lighting and programmable keys.",
@@ -67,10 +66,10 @@
     "rating": 4.6,
     "brand": "GamePro"
   },
-  {
+  { 
     "product_id": 6,
     "product_title": "Portable Charger",
-    "product_image": "https://example.com/images/portable-charger.jpg",
+    "product_image": "https://i.ibb.co.com/kKhgRrZ/portablecharger.png",
     "category": "Electronics",
     "price": 55,
     "description": "Compact and high-capacity power bank for on-the-go charging.",
@@ -82,7 +81,7 @@
   {
     "product_id": 7,
     "product_title": "iPhone 13",
-    "product_image": "https://example.com/images/iphone_13.jpg",
+    "product_image": "https://i.ibb.co.com/Yk83GtN/iphone.jpg",
     "category": "Phones",
     "price": 799,
     "description": "Latest Apple smartphone with A15 chip and 5G support.",
@@ -94,7 +93,7 @@
   {
     "product_id": 8,
     "product_title": "Samsung Galaxy S21",
-    "product_image": "https://example.com/images/galaxy_s21.jpg",
+    "product_image": "https://i.ibb.co.com/G2sjgmq/galaxy.png",
     "category": "Phones",
     "price": 749,
     "description": "Premium smartphone with a stunning display and triple camera.",
@@ -106,7 +105,7 @@
   {
     "product_id": 9,
     "product_title": "Apple Watch Series 7",
-    "product_image": "https://example.com/images/apple_watch_series_7.jpg",
+    "product_image": "https://i.ibb.co.com/4m3KzLm/applwwatch.jpg",
     "category": "Smart Watches",
     "price": 399,
     "description": "The most advanced Apple Watch with new features and larger display.",
@@ -118,7 +117,7 @@
   {
     "product_id": 10,
     "product_title": "Samsung Galaxy Watch 4",
-    "product_image": "https://example.com/images/galaxy_watch_4.jpg",
+    "product_image": "https://i.ibb.co.com/vVrXkm9/galaxywatch.jpg",
     "category": "Smart Watches",
     "price": 249,
     "description": "Stylish smartwatch with health tracking features and great battery life.",
@@ -130,7 +129,7 @@
   {
     "product_id": 11,
     "product_title": "Dell XPS 13",
-    "product_image": "https://example.com/images/dell_xps_13.jpg",
+    "product_image": "https://i.ibb.co.com/yfCMTzf/dellxps.jpg",
     "category": "Laptop",
     "price": 999.99,
     "description": "A high-performance laptop with a sleek design.",
@@ -142,7 +141,7 @@
   {
     "product_id": 12,
     "product_title": "Apple MacBook Pro",
-    "product_image": "https://example.com/images/macbook_pro.jpg",
+    "product_image": "https://i.ibb.co.com/ncDkDjT/macbook.jpg",
     "category": "Laptop",
     "price": 1299.99,
     "description": "Powerful laptop designed for professionals.",
@@ -159,7 +158,7 @@
   {
     "product_id": 13,
     "product_title": "Lenovo ThinkPad X1 Carbon",
-    "product_image": "https://example.com/images/thinkpad_x1_carbon.jpg",
+    "product_image": "https://i.ibb.co.com/xJjDsms/lenovo.jpg",
     "category": "Laptop",
     "price": 1399.99,
     "description": "A business laptop with exceptional durability.",

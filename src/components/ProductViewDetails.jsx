@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -12,12 +12,13 @@ const ProductViewDetails = ({ addToCart, wishlist, addToWishlist }) => {
   if (!product) {
     return <p>Product not found</p>;
   }
+
   const handleAddToCart = () => {
     addToCart(product); // Add the product to the cart
-    toast.success(`Product has been added to the cart!`);
+    // toast.success(`Product has been added to the cart!`);
   };
 
-  const isInWishlist = wishlist.some((item) => item.id === product.id);
+  const isInWishlist = wishlist.some((item) => item.id === product.id); 
 
   const handleAddToWishlist = () => {
     if (!isInWishlist) {
@@ -76,17 +77,18 @@ const ProductViewDetails = ({ addToCart, wishlist, addToWishlist }) => {
 
     return stars;
   };
+  
 
   return (
     <>
       <div className="pb-28">
-        <div className="p-4 mt-[-230px] bg-white w-[1000px] h-[470px] mx-auto rounded-xl">
-          <div className="flex gap-6">
+        <div className="p-4 mt-[-230px] bg-white w-[350px] xl:w-[1000px] lg:w-[1000px] md:w-[690px] xl:h-[470px] lg:h-[470px] md:h-[470px] mx-auto rounded-xl">
+          <div className="xl:flex gap-6">
             <div>
               <img
                 src={product.product_image}
                 alt={product.product_title}
-                className="w-[300px] h-[430px] object-cover rounded-lg mb-4 bg-gray-400"
+                className="w-full xl:w-[300px] lg:w-[300px] md:w-[300px] h-[215px] xl:h-[430px] lg:h-[430px] md:h-[430px] object-cover rounded-lg mb-4"
               />
             </div>
             <div>

@@ -16,16 +16,7 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist, setActiveCompo
   const isDashboardViewDetails = location.pathname.startsWith("/dashboard");
   const isStatisticsViewDetails = location.pathname.startsWith("/statistics");
   const isAboutUsViewDetails = location.pathname.startsWith("/about-us");
-  // const [activeComponent, setActiveComponent] = useState("dashboard"); 
-  // const [cartCount, setCartCount] = useState(cartItems.length);
-  const [cart, setCart] = useState(cartItems);
-
-  // const handleAddToCart = (item) => {
-  //   setCart((prevCart) => [...prevCart, item]);
-  //   setCartCount((prevCount) => prevCount + 1); // Increment the cart count
-  //   toast.success(`Product has been added to the cart!`);
-  // };
-
+  
   const handleWishlistClick = () => {
     setActiveComponent("wishlist"); // Set active component to Wishlist
   };
@@ -33,11 +24,6 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist, setActiveCompo
   const handleCartClick = () => {
     setActiveComponent("dashboard"); // Set active component to Dashboard
   };
-
-  // useEffect(() => {
-  //   setCartCount(cartItems.length);
-  //   setCart(cartItems);
-  // }, [cartItems]);
 
   return (
     <>
@@ -332,19 +318,7 @@ const Navbar = ({ wishlist, cartItems, setCartItems, setWishlist, setActiveCompo
           <BannerImagePart />
         )}
       </header>
-      {/* {!isProductViewDetails && <Cards />} */}
-      {/* {activeComponent === "wishlist"
-        ?  (
-          <WishList
-            wishlist={wishlist}
-            onAddToCart={handleAddToCart}
-            setWishlist={setWishlist}
-          />
-        )
-        : isDashboardViewDetails && (
-          ""
-         
-        )} */}
+    
     </>
   );
 };

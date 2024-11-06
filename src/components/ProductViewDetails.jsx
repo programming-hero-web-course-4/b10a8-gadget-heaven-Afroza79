@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 const ProductViewDetails = ({ addToCart, wishlist, addToWishlist }) => {
   const location = useLocation();
   const product = location.state?.product;
+  
 
   if (!product) {
     return <p>Product not found</p>;
@@ -15,14 +16,14 @@ const ProductViewDetails = ({ addToCart, wishlist, addToWishlist }) => {
 
   const handleAddToCart = () => {
     addToCart(product); // Add the product to the cart
-    // toast.success(`Product has been added to the cart!`);
+    
   };
 
-  const isInWishlist = wishlist.some((item) => item.id === product.id); 
-
+  const isInWishlist = wishlist.some((item) => item.product_id === product.product_id); 
+ 
   const handleAddToWishlist = () => {
     if (!isInWishlist) {
-      addToWishlist(product); // Add to wishlist if not already present
+      addToWishlist(product); 
       toast.success(`Product has been added to the wishlist!`);
     }
   };

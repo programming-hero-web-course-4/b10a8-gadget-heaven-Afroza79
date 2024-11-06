@@ -25,7 +25,7 @@ function App() {
   
   // Function to add a product to the wishlist
   const addToWishlist = (product) => {
-    if (!wishlist.find((item) => item.id === product.id)) {
+    if (!wishlist.find((item) => item.product_id === product.product_id)) {
       setWishlist([...wishlist, product]);
     }
   };
